@@ -1,0 +1,15 @@
+name: MineProbability
+version: 0.0.1
+main: dev.luxilith.MineProbability.MineProbability
+api-version: 1.18
+commands:
+   probability:
+      description: "Check the explosion probability."
+      usage: "/probability"
+   mine:
+      description: "Enable or disable the mining system."
+      usage: "/mine enable | /mine disable"
+permissions:
+   mineprobability.use:
+      description: "Allows the use of MineProbability commands."
+      default: true

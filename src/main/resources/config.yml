@@ -1,0 +1,83 @@
+# =======================================================================
+#                   MineProbability - Configuration
+# =======================================================================
+# This configuration file controls all parameters for the block explosion
+# system when breaking "ORE" blocks (such as gold, diamond, etc.).
+# You can customize the probability, damage, explosion power, and more.
+#
+# GitHub: https://github.com/LuxIlith
+# =======================================================================
+
+# =======================================================================
+# MINING SYSTEM
+# =======================================================================
+# Enable or disable the mining system.
+# If disabled, blocks will not explode.
+enabled: false  # Change to true to activate the system, false to deactivate it
+
+# =======================================================================
+# PROBABILITY CONFIGURATION
+# =======================================================================
+# The type of probability used to determine whether a block will explode.
+# It can be "Fixed" or "Random". Use "Fixed" for a constant percentage or
+# "Random" for a range between a minimum and maximum value.
+ProbabilityType: "Fixed"  # Can be "Fixed" or "Random"
+
+# If the probability type is "Fixed", set the fixed probability percentage.
+# It should be a value between 1 and 100 (e.g., 50 means 50% chance).
+FixedProbability: 50  # Must be between 1 and 100
+
+# If the probability type is "Random", set the minimum and maximum probability values.
+# Make sure the maximum value is greater than the minimum value.
+RandomProbability:
+  Min: 20  # Must be between 1 and 100
+  Max: 80  # Must be between 1 and 100, and Max > Min
+
+# =======================================================================
+# EXPLOSION CONFIGURATION
+# =======================================================================
+# The damage caused by the explosion. Damage is measured in hearts (1 heart = 2 health points).
+# You can configure the damage between 1 and 10 hearts.
+ExplosionDamage: 5.0  # Activated if enabled, value between 1 and 10
+
+# Enable or disable damage to players. If enabled, players will take damage
+# when a block breaks and explodes.
+ExplosionDamageEnabled: true  # Change to false to disable damage
+
+# Explosion power. The value ranges from 1 to 5, with 5 being equivalent to 20 TNT explosions combined.
+# Higher values cause more damage and a larger explosion radius.
+ExplosionPower: 5  # Must be between 1 and 5
+
+# Whether blocks around the explosion should be destroyed.
+# If disabled, blocks will not be destroyed, only the damage will apply.
+ExplosionBreakBlocks: true  # Change to false if you don't want blocks to break
+
+# =======================================================================
+# SECURITY CONFIGURATION
+# =======================================================================
+# Do not touch these settings unless you know what you're doing.
+# Incorrect configuration may cause unexpected behavior.
+
+Security:
+  # Minimum allowed value for any probability. It should never be lower than 1.
+  MinProbability: 1  # Minimum value for any probability (1-100)
+
+  # Maximum allowed value for any probability. It should never exceed 100.
+  MaxProbability: 100  # Maximum value for any probability (1-100)
+
+  # WARNING: Do not set percentages higher than 100 or lower than 1.
+  # Values outside this range can cause system failures.
+  # Example valid configurations:
+  # - FixedProbability: 50 -> 50% explosion chance.
+  # - RandomProbability: Min: 30, Max: 70 -> Random probability between 30% and 70%.
+
+# =======================================================================
+# FINAL NOTE
+# =======================================================================
+# If you have issues or questions on how to configure this plugin, you can
+# Visit my GitHub at https://github.com/LuxIlith.
+# Thank you for using MineProbability!
+
+# =======================================================================
+# END OF CONFIGURATION
+# =======================================================================
